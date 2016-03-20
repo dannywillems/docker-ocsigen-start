@@ -44,8 +44,7 @@ For the same reason, node js, npm and cordova are not installed.
   (such as your editor).
   Use
   ```Shell
-  docker run -it -v /srv/docker/eliom-base-app/workspace:/home/opam/workspace
-  dannywillems/docker-eliom-base-app
+  docker run -it -v /srv/docker/eliom-base-app/workspace:/home/opam/workspace dannywillems/docker-eliom-base-app
   ```
 
 * Such as said previously, cordova, node js and android sdk are not installed
@@ -67,8 +66,7 @@ For the same reason, node js, npm and cordova are not installed.
 
   To create a new mobile eliom application in the workspace directory, use
   ```
-  cd ~/workspace && eliom-distillery -name eliom_is_awesome -template
-  eba.pgocaml
+  cd ~/workspace && eliom-distillery -name eliom_is_awesome -template eba.pgocaml
   ```
   and answer yes.
 
