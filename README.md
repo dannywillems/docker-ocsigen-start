@@ -45,7 +45,7 @@ For the same reason, node js, npm and cordova are not installed.
   Use
   ```Shell
   docker run -it -v /srv/docker/eliom-base-app/workspace:/home/opam/workspace
-  dannywillems/eliom-base-app
+  dannywillems/docker-eliom-base-app
   ```
 
 * Such as said previously, cordova, node js and android sdk are not installed
@@ -57,7 +57,7 @@ For the same reason, node js, npm and cordova are not installed.
 
   Create a new container:
   ```
-  docker run -it dannywillems/eliom-base-app bash
+  docker run -it dannywillems/docker-eliom-base-app bash
   ```
 
   Update the ocaml version to 4.02.3 with
