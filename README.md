@@ -55,7 +55,7 @@ For the same reason, node js, npm and cordova are not installed.
   ### Start a new eliom mobile application
 
   Create a new container:
-  ```
+  ```Shell
   docker run -it dannywillems/docker-eliom-base-app bash
   ```
 
@@ -65,20 +65,20 @@ For the same reason, node js, npm and cordova are not installed.
   ```
 
   To create a new mobile eliom application in the workspace directory, use
-  ```
+  ```Shell
   cd ~/workspace && eliom-distillery -name eliom_is_awesome -template eba.pgocaml
   ```
   and answer yes.
 
   The created project comes with an example. You can build it for android
   with:
-  ```
+  ```Shell
   make android
   ```
 
   To install directory the application on your android smartphone, you can use
   the target:
-  ```
+  ```Shell
   make install-android
   ```
 
