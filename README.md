@@ -64,6 +64,11 @@ For the same reason, node js, npm and cordova are not installed.
   eval `opam config env`
   ```
 
+  Update and upgrade (if needed) opam packages
+  ```Shell
+  opam update && opam upgrade
+  ```
+
   To create a new mobile eliom application in the workspace directory, use
   ```Shell
   cd ~/workspace && eliom-distillery -name eliom_is_awesome -template eba.pgocaml
