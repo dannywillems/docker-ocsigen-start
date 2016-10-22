@@ -30,7 +30,7 @@ reposity](https://github.com/ocsigen/ocsigen-start)
 
 This container uses `ocaml/opam:debian` image. It pins
 - `ocsigenserver`
-- `reactiveData
+- `reactiveData`
 - `ocsigen-toolkit`
 - `eliom`
 - `ocsigen-start`
