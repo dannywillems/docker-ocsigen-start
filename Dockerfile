@@ -13,7 +13,6 @@ RUN opam depext conf-zlib.1
 RUN opam depext dbm.1.0
 RUN opam depext imagemagick.0.34-1
 
-
 RUN opam pin add --no-action -y ocsigenserver https://github.com/ocsigen/ocsigenserver.git
 RUN opam pin add --no-action -y reactiveData https://github.com/ocsigen/reactiveData.git
 RUN opam pin add --no-action -y eliom https://github.com/ocsigen/eliom.git
