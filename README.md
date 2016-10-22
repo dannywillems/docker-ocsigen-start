@@ -26,20 +26,25 @@ web applications with Ocsigen (Js_of_ocaml and Eliom).
 Source: [Ocsigen-start github
 reposity](https://github.com/ocsigen/ocsigen-start)
 
-### What does this container contain ?
+### What does this container contain?
 
-This container uses ocaml/opam:debian image. It pins eliom, ocsigen-start,
-macaque, ocsigen-toolkit, ocsigenserver, reactiveData to the GitHub repository (for
-*eliom*, *ocsigen-start* and *ocsigen-toolkit*, *macaque*) and
-installs them. It also installs PostgreSQL (needed by ocsigen-start).
+This container uses `ocaml/opam:debian` image. It pins
+- `ocsigenserver`
+- `reactiveData
+- `ocsigen-toolkit`
+- `eliom`
+- `ocsigen-start`
+and installs these packages.
+It also installs PostgreSQL (needed by ocsigen-start).
 
-### What does this container not contain ?
-This container has no android sdk installed, given you the choice to use a
-volume if you have android sdk installed on your machine.
-For the same reason, node js, npm and cordova are not installed.
+### What does this container not contain?
+
+This container has no Android SDK installed, given you the choice to use a
+volume if you have Android SDK installed on your machine.
+For the same reason, NodeJS, NPM and Cordova are not installed.
 
 ### Useful volumes
-* A workspace for your eliom mobile project is created in the opam home. It is
+* A workspace for your eliom mobile project is created in the OPAM home. It is
   useful to share this repository to be able to use your development environment
   (such as your editor).
   Use
@@ -47,10 +52,10 @@ For the same reason, node js, npm and cordova are not installed.
   docker run -it -v /srv/docker/ocsigen-start/workspace:/home/opam/workspace dannywillems/docker-ocsigen-start
   ```
 
-* Such as said previously, cordova, node js and android sdk are not installed
+* Such as said previously, Cordova, NodeJS and Android SDK are not installed
   to let you the choice to use your existing installation.
-  **Don't forget to add npm packages repository to the container path as well
-  as android_home variable.**
+  **Don't forget to add NPM packages repository to the container path as well
+  as `android_home` variable.**
 
   ### Start a new eliom mobile application
 
@@ -64,7 +69,7 @@ For the same reason, node js, npm and cordova are not installed.
   eval `opam config env`
   ```
 
-  Update and upgrade (if needed) opam packages
+  Update and upgrade (if needed) OPAM packages
   ```Shell
   opam update && opam upgrade
   ```
