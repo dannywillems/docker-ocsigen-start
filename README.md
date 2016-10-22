@@ -1,9 +1,9 @@
-## Eliom-base-app
+## Ocsigen-start
 Start your mobile application entirely in OCaml with eliom.
 
-**Eliom base app is in development**
+**Ocsigen-start is in development**
 
-### What is Eliom ?
+### What is Eliom?
 
 ```
 Eliom is a framework for programming web sites and client/server web
@@ -16,22 +16,22 @@ written in OCaml, as a single program.
 
 Source: [Ocisgen website](http://ocsigen.org/eliom/)
 
-### What is Eliom base app ?
+### What is Ocsigen-start?
 
 ```
-Eliom-base-app is a set of higher-level libraries for building client-server
+Ocsigen-start is a set of higher-level libraries for building client-server
 web applications with Ocsigen (Js_of_ocaml and Eliom).
 ```
 
-Source: [Eliom base app github
-reposity](https://github.com/ocsigen/eliom-base-app)
+Source: [Ocsigen-start github
+reposity](https://github.com/ocsigen/ocsigen-start)
 
 ### What does this container contain ?
-This container uses ocaml/opam:debian image. It pins eliom, eliom-base-app,
-macaque, ocsigen-widgets, ojquery and tyxml to the github repository (for
-*eliom*, *eliom-base-app* and *ocsigen-widgets* to the mobile branch) and
-installs them. It also installs postgresql (needed by eliom) and adds pg_ctl to
-the path.
+
+This container uses ocaml/opam:debian image. It pins eliom, ocsigen-start,
+macaque, ocsigen-toolkit, ocsigenserver, reactiveData to the GitHub repository (for
+*eliom*, *ocsigen-start* and *ocsigen-toolkit*, *macaque*) and
+installs them. It also installs PostgreSQL (needed by ocsigen-start).
 
 ### What does this container not contain ?
 This container has no android sdk installed, given you the choice to use a
@@ -44,7 +44,7 @@ For the same reason, node js, npm and cordova are not installed.
   (such as your editor).
   Use
   ```Shell
-  docker run -it -v /srv/docker/eliom-base-app/workspace:/home/opam/workspace dannywillems/docker-eliom-base-app
+  docker run -it -v /srv/docker/ocsigen-start/workspace:/home/opam/workspace dannywillems/docker-ocsigen-start
   ```
 
 * Such as said previously, cordova, node js and android sdk are not installed
@@ -56,7 +56,7 @@ For the same reason, node js, npm and cordova are not installed.
 
   Create a new container:
   ```Shell
-  docker run -it dannywillems/docker-eliom-base-app bash
+  docker run -it dannywillems/docker-ocsigen-start bash
   ```
 
   Update the ocaml version to 4.02.3 with
@@ -71,23 +71,22 @@ For the same reason, node js, npm and cordova are not installed.
 
   To create a new mobile eliom application in the workspace directory, use
   ```Shell
-  cd ~/workspace && eliom-distillery -name eliom_is_awesome -template eba.pgocaml
+  cd ~/workspace && eliom-distillery -name eliom_is_awesome -template os.pgocaml
   ```
   and answer yes.
 
-  The created project comes with an example. You can build it for android
+  The created project comes with an example. You can build it for Android
   with:
   ```Shell
   make android
   ```
 
-  To install directory the application on your android smartphone, you can use
-  the target:
+  To install and run the application on your Android smartphone, you can use
   ```Shell
-  make install-android
+  make run-android
   ```
 
-### What about cordova plugins ?
+### What about Cordova plugins?
 
-A binding in OCaml using js_of_ocaml to cordova plugins is done
+A binding in OCaml using gen_js_api to Cordova plugins is done
 [here](https://github.com/dannywillems/ocaml-cordova-plugin-list).
