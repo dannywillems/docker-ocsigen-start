@@ -5,7 +5,7 @@ RUN sudo apt-get update
 
 RUN mkdir workspace
 
-RUN sudo apt-get install -y dialog
+RUN sudo apt-get install -y dialog postgresql
 
 RUN cd opam-repository && git pull && opam update
 
