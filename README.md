@@ -1,7 +1,7 @@
-## Ocsigen-start
+## Ocsigen Start
 Start your mobile application entirely in OCaml with eliom.
 
-**Ocsigen-start is in development**
+**Ocsigen Start is in development**
 
 ### What is Eliom?
 
@@ -16,26 +16,20 @@ written in OCaml, as a single program.
 
 Source: [Ocisgen website](http://ocsigen.org/eliom/)
 
-### What is Ocsigen-start?
+### What is Ocsigen Start?
 
 ```
-Ocsigen-start is a set of higher-level libraries for building client-server
+Ocsigen Start is a set of higher-level libraries for building client-server
 web applications with Ocsigen (Js_of_ocaml and Eliom).
 ```
 
-Source: [Ocsigen-start github
-reposity](https://github.com/ocsigen/ocsigen-start)
+Source: [Ocsigen Start github
+reposity](https://github.com/ocsigen/Ocsigen Start)
 
 ### What does this container contain?
 
-This container uses `ocaml/opam:debian` image. It pins
-- `ocsigenserver`
-- `reactiveData`
-- `ocsigen-toolkit`
-- `eliom`
-- `ocsigen-start`
-and installs these packages.
-It also installs PostgreSQL (needed by ocsigen-start).
+This container uses `ocaml/opam:debian` image.
+It also installs PostgreSQL (needed by Ocsigen Start).
 
 ### What does this container not contain?
 
@@ -49,7 +43,9 @@ For the same reason, NodeJS, NPM and Cordova are not installed.
   (such as your editor).
   Use
   ```Shell
-  docker run -it -v /srv/docker/ocsigen-start/workspace:/home/opam/workspace dannywillems/docker-ocsigen-start
+  docker run -it \
+    -v /home/opam/workspace \
+    dannywillems/docker-ocsigen-start
   ```
 
 * Such as said previously, Cordova, NodeJS and Android SDK are not installed
@@ -64,21 +60,17 @@ For the same reason, NodeJS, NPM and Cordova are not installed.
   docker run -it dannywillems/docker-ocsigen-start bash
   ```
 
-  Update the ocaml version to 4.02.3 with
-  ```Shell
-  eval `opam config env`
-  ```
-
   Update and upgrade (if needed) OPAM packages
   ```Shell
+  eval `opam config env`
   opam update && opam upgrade
   ```
 
   To create a new mobile eliom application in the workspace directory, use
   ```Shell
-  cd ~/workspace && eliom-distillery -name eliom_is_awesome -template os.pgocaml
+  cd ~/workspace
+  eliom-distillery -y -name eliom_is_awesome -template os.pgocaml
   ```
-  and answer yes.
 
   The created project comes with an example. You can build it for Android
   with:
@@ -93,5 +85,5 @@ For the same reason, NodeJS, NPM and Cordova are not installed.
 
 ### What about Cordova plugins?
 
-A binding in OCaml using gen_js_api to Cordova plugins is done
+A binding in OCaml using `gen_js_api` to Cordova plugins is done
 [here](https://github.com/dannywillems/ocaml-cordova-plugin-list).
