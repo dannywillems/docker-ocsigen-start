@@ -6,12 +6,16 @@ Start your mobile application entirely in OCaml with eliom.
 ### What is Eliom?
 
 ```
-Eliom is a framework for programming web sites and client/server web
-applications.
-It uses very new concepts making programming very different from all
-other web programming tools, and allowing to write a complex web site
-in very few lines of code. Both server and client parts of the program are
-written in OCaml, as a single program.
+Eliom is a framework for building client/server Web and mobile applications 
+in OCaml. It transforms OCaml into a multi-tier language, making it possible to
+implement both the server and client parts of a Web and mobile app as a single
+program.
+Applications can run on any Web browser or mobile device (iOS,Android), saving
+from the need to develop one version for each platform.
+
+Eliom has support for reactive pages (generated on server or client),
+advanced session mechanism, server to client communication,
+continuation based Web programming, etc.
 ```
 
 Source: [Ocisgen website](http://ocsigen.org/eliom/)
@@ -19,8 +23,9 @@ Source: [Ocisgen website](http://ocsigen.org/eliom/)
 ### What is Ocsigen Start?
 
 ```
-Ocsigen Start is a set of higher-level libraries for building client-server
-web applications with Ocsigen (Js_of_ocaml and Eliom).
+Ocsigen Start is an application template written with Eliom, Js_of_ocaml,
+Ocsigen Toolkit, etc. It contains many standard features like user management, 
+notifications, and many code examples.
 ```
 
 Source: [Ocsigen Start github
